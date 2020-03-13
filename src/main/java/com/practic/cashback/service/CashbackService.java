@@ -21,6 +21,4 @@ public class CashbackService {
     public void addNewOrder(Orders orders) {
         ordersRepository.save(orders);
     }
-
-
 }
