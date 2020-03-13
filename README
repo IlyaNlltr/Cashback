@@ -1,0 +1,12 @@
+Cashback
+
+Used:
+-Java Spring framework.
+-Kafka
+-Docker
+
+This is a program for calculating cashback on a remote node. 
+The calculation status was monitored at the user's request. In this example, both sending and receiving are in the same file.
+
+Communication between them is carried out using kafka. 
+The project was packaged in docker-container and deployed on a local machine. 
