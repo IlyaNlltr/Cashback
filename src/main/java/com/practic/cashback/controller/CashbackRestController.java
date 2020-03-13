@@ -1,6 +1,5 @@
 package com.practic.cashback.controller;
 
-import com.practic.cashback.Status.StatusEnum;
 import com.practic.cashback.dao.CashbackRepository;
 import com.practic.cashback.dao.ClientRepository;
 import com.practic.cashback.dao.OrdersRepository;
@@ -10,8 +9,12 @@ import com.practic.cashback.dto.ProcessResDTO;
 import com.practic.cashback.kafka.produser.Sender;
 import com.practic.cashback.model.Cashback;
 import com.practic.cashback.model.ProcessRes;
+import com.practic.cashback.status.StatusEnum;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

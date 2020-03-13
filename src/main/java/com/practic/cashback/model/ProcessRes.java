@@ -1,6 +1,6 @@
 package com.practic.cashback.model;
 
-import com.practic.cashback.Status.StatusEnum;
+import com.practic.cashback.status.StatusEnum;
 import lombok.Data;
 
 import javax.persistence.*;

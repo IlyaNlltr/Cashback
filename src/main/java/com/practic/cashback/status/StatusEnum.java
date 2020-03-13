@@ -1,4 +1,4 @@
-package com.practic.cashback.Status;
+package com.practic.cashback.status;
 
 public enum StatusEnum {
     IN_PROGRESS,

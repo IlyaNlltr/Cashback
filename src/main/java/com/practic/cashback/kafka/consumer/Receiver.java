@@ -1,6 +1,6 @@
 package com.practic.cashback.kafka.consumer;
 
-import com.practic.cashback.Status.StatusEnum;
+import com.practic.cashback.status.StatusEnum;
 import com.practic.cashback.dao.CashbackRepository;
 import com.practic.cashback.dao.ProcessResRepository;
 import com.practic.cashback.dto.CashbackDTO;

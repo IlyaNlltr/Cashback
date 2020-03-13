@@ -1,6 +1,6 @@
 package com.practic.cashback.dto;
 
-import com.practic.cashback.Status.StatusEnum;
+import com.practic.cashback.status.StatusEnum;
 import lombok.Data;
 
 import java.io.Serializable;
