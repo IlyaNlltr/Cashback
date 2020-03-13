@@ -1,0 +1,34 @@
+spring:
+  kafka:
+    topic:
+        json: jsonSending
+    bootstrap-servers:
+        localhost: 2181
+    consumer:
+        group-id: group_id
+        auto-offset-reset: earliest
+        key-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+        value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+        properties:
+          spring:
+            json:
+              trusted:
+                packages: '*'
+    producer:
+        key-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+        value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+  datasource:
+        driver-Class-Name: org.postgresql.Driver
+        url: jdbc:postgresql://localhost:5432/cashback
+        username: postgres
+        password: postgres
+  jpa:
+    generate-ddl: true
+    show_sql: true
+    hibernate:
+        ddl-auto: create-drop
+    properties:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+

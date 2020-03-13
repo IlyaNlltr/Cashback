@@ -1,5 +1,5 @@
 package com.practic.cashback.dao;
-import com.practic.cashback.dto.ProcessRes;
+import com.practic.cashback.model.ProcessRes;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

@@ -5,7 +5,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 
 @Entity
 @Table
@@ -14,19 +13,19 @@ import java.util.List;
 public class Orders implements Serializable {
     @Id // первичный ключ таблицы
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(nullable = false)
     private Long id;
 
     @OneToOne(fetch = FetchType.EAGER) // FetchType.EAGER - данные будут привязыватся сразу (не lazy)
-    @JoinColumn(columnDefinition = "client_id") //  - колонка для связи с другой таблицей
+    @JoinColumn
     private Client clientOrders;
 
-    @Column(name = "date")
+    @Column
     private String date;
 
-    @Column(name = "orderName")
+    @Column
     private String orderName;
 
-    @Column(name = "summ")
+    @Column
     private Double summ;
 }

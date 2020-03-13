@@ -7,7 +7,6 @@ import com.practic.cashback.model.Orders;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-
 @Service
 @AllArgsConstructor
 public class CashbackService {

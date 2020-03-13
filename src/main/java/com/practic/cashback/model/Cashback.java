@@ -1,40 +1,36 @@
 package com.practic.cashback.model;
 
-import com.practic.cashback.dto.ProcessRes;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.List;
-import java.util.UUID;
 
 @Entity
 @Table
 @Data
 public class Cashback {
-    @Id
-    private UUID id;
 
-    @Column(name = "money")
+    @Id
+    @Column
+    @GeneratedValue(generator = "doc-uuid")
+    @GenericGenerator(name = "doc-uuid", strategy = "uuid")
+    private String id;
+
+    @Column
     private Double money;
 
-    @Column(name = "persent")
+    @Column
     private Long persent;
 
     @OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "orders_id")
+    @JoinColumn
     private Orders orders;
 
     @OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "client_id")
+    @JoinColumn
     private Client client;
 
     @OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "result")
+    @JoinColumn
     private ProcessRes processRes;
-
-    private UUID uuid() {
-        return UUID.randomUUID();
-    }
 }
