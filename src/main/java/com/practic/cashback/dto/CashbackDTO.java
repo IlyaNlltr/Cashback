@@ -14,6 +14,4 @@ public class CashbackDTO implements Serializable {
     private Orders orders;
     private Client client;
     private ProcessRes processRes;
-
-
 }

@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  cashback:
+    image: cashback
+    build:
+      context: .
+      dockerfile: Dockerfile
+    hostname: nvpsv.cashback
+    volumes:
+      - ./local_config:/config
+    # Configuring the environment variable
+    environment:
+      - CONFIG_LOCATION=file:/config/application.properties
+    container_name: cb
+    network_mode: host
+    ports:
+      - "8080:8080"
